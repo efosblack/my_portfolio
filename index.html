@@ -27,8 +27,8 @@
 
                     </div>
                     <ul id="navigation">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#resume">Resume</a></li>
 
                     </ul>
                 </div>
@@ -82,7 +82,7 @@
 
 					<hr>
 
-					<h4>TOP EXPERTISE</h4>
+					<h4 id="resume">TOP EXPERTISE</h4>
 
 					<p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="resumé.pdf">Download Resume</a></p>
 
@@ -133,7 +133,7 @@
 						<div class="post-preview">
 							<h6 class="post-title">Django Blog App</h6>
 							<p class="post-intro">Designed built & mantained a private blog for my friends and I to share our thoughts, a friendship diary if you wish.</p>
-                            <a href="post.html">Read More</a>
+                            <a href="https://github.com/efosblack/django_blog" target="_blank">Source Code</a>
                             <br>
 							<a href="https://efeblogapp.herokuapp.com" target="_blank">Live Demo</a>
 						</div>
@@ -146,7 +146,7 @@
 						<div class="post-preview">
 							<h6 class="post-title">Online Marketplace</h6>
 							<p class="post-intro"> currently working on an Online store with paypal payments intergration and guest user shopping</p>
-							<a href="post.html">Read More</a>
+							<a href="https://github.com/efosblack/ecommerce-website-using-Django-with-React" target="_blank">Source Code</a>
 						</div>
 					</div>
 				</div>
@@ -157,7 +157,7 @@
 						<div class="post-preview">
 							<h6 class="post-title">Simple React Blog</h6>
 							<p class="post-intro">A social Blog I made while practicing my React skills</p>
-							<a href="post.html">Read More</a>
+							<a href="https://github.com/efosblack/learning_react" target="_blank">Source Code</a>
 						</div>
 					</div>
 				</div>
@@ -168,23 +168,29 @@
 
     <section class="s2">
 		<div class="main-container">
-			<a href=""></a>
-			<h3 style="text-align: center;">Get In Touch</h3>
+			<!-- <a href=""></a> -->
+			<h3  style="text-align: center;">Get In Touch</h3>
 
-			<form id="contact-form">
+			<form action="https://formspree.io/f/mrgdqqqr" method="POST" id="contact-form" >
+				<!-- Honeypot -->
+				<input type="text" name="_honey" style="display: none;">
+			
+
+				
+
 				<a name="contact"></a>
 
 				<label>Name</label>
-				<input class="input-field" type="text" name="name">
+				<input id="name" class="input-field" type="text" name="name" required>
 
 				<label>Subject</label>
-				<input class="input-field" type="text" name="subject">
+				<input id="subject" class="input-field" type="text" name="subject">
 
 				<label>Email</label>
-				<input class="input-field" type="text" name="email">
+				<input id="email" class="input-field" type="text" name="email" required>
 
 				<label>Message</label>
-				<textarea class="input-field" name="message"></textarea>
+				<textarea id="message" class="input-field" name="message" required></textarea>
 
 				<input id="submit-btn" type="submit" value="Send">
 			</form>
@@ -193,5 +199,8 @@
 
     <script type="text/javascript" src="script.js"></script>
     
+
+   
+
 </body>
 </html>
